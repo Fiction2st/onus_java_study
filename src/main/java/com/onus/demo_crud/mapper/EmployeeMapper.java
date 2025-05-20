@@ -2,12 +2,11 @@ package com.onus.demo_crud.mapper;
 
 import com.onus.demo_crud.dtos.EmployeeDTO;
 import com.onus.demo_crud.dtos.EmployeeResponseDTO;
-import com.onus.demo_crud.entities.Employees;
+import com.onus.demo_crud.entities.Employee;
 
 public class EmployeeMapper {
-    public static Employees mapToEmployee(EmployeeDTO employeeDTO) {
-        Employees employee = new Employees();
-        employee.setId(employeeDTO.getId());
+    public static Employee mapToEmployee(EmployeeDTO employeeDTO) {
+        Employee employee = new Employee();
         employee.setFirstName(employeeDTO.getFirstName());
         employee.setLastName(employeeDTO.getLastName());
         employee.setEmail(employeeDTO.getEmail());
@@ -15,7 +14,7 @@ public class EmployeeMapper {
         return employee;
     }
 
-    public static EmployeeResponseDTO mapToEmployeeResponseDTO(Employees employee) {
+    public static EmployeeResponseDTO mapToEmployeeResponseDTO(Employee employee) {
         EmployeeResponseDTO employeeResponseDTO = new EmployeeResponseDTO();
         employeeResponseDTO.setId(employee.getId());
         employeeResponseDTO.setFirstName(employee.getFirstName());

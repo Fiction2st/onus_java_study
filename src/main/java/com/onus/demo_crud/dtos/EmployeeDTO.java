@@ -12,9 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class EmployeeDTO {
-    private String id;
 
-    @NotEmpty(message = "First name should not be empty")
     private String firstName;
 
     @NotEmpty(message = "Last name should not be empty")
